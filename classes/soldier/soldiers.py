@@ -4,15 +4,12 @@ from classes.soldier.soldier import Soldier
 class Soldiers:
     def __init__(self):
         self.class_soldiers = []
-        # coloms
 
     def add_soldier(self, soldier: Soldier):
         """adding a new soldier"""
         self.class_soldiers.append(soldier)
-        # print(soldier)
 
     def add_csv_soldiers(self, soldiers):
-        # print(soldiers)
         try:
             for soldier in soldiers:
                 new_soldiers = Soldier(
@@ -44,7 +41,6 @@ class Soldiers:
     def get_soldier_by_id(self, soldier_id):
         print(len(self.class_soldiers))
         for s in self.class_soldiers:
-            # print(soldier_id,s.soldier_number )
             if s.soldier_number == str(soldier_id):
                 return s
         return {"no soldier maching"}
