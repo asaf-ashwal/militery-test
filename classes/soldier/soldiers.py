@@ -29,7 +29,8 @@ class Soldiers:
 
         except:
             print("Error")
-
+    def get_thet_wait():
+        pass
 
 def myFunc(e):
     return e.distance
