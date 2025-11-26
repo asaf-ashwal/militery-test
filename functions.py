@@ -19,6 +19,7 @@ def csv_reader(csv_content: UploadFile):
     res = houses_table.add_full_soldier_to_houses(soldier_table.class_soldiers)
 
     return {
+        "all soldiers len":len(rows),
          "soldiers in houses":res,
          "on the waiting list":len(soldier_table.class_soldiers)-res,
         "all soldiers": soldier_table.class_soldiers,

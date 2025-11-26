@@ -29,8 +29,26 @@ class Soldiers:
 
         except:
             print("Error")
-    def get_thet_wait():
-        pass
+
+    # הם כבר מסודרים אז הוא יחזיר אןתם לפי סדר עדיפויות
+    def get_thet_wait(self):
+        wait_soldiers = []
+        for s in self.class_soldiers:
+            if s.inlay_status == "on the waiting list":
+                wait_soldiers.append(s)
+        return {
+            "waiting list number": len(wait_soldiers),
+            "the soldiers": wait_soldiers,
+        }
+
+    def get_soldier_by_id(self, soldier_id):
+        print(len(self.class_soldiers))
+        for s in self.class_soldiers:
+            # print(soldier_id,s.soldier_number )
+            if s.soldier_number == str(soldier_id):
+                return s
+        return {"no soldier maching"}
+
 
 def myFunc(e):
     return e.distance

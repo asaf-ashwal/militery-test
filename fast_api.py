@@ -32,3 +32,7 @@ def space_geter():
 def gets_waitingList():
     result = soldier_table.get_thet_wait()
     return result
+@app.get('/search/{soldier_id}')
+def gets_soldier(soldier_id):
+    result = soldier_table.get_soldier_by_id(soldier_id)
+    return result
